@@ -55,6 +55,7 @@ campsiteRouter.route('/:campsiteId')
     Campsite.findByIdAndUpdate(
       req.params.campsiteId,
       {
+        // $set updates specific field only
         $set: req.body,
       },
       { new: true }
